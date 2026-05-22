@@ -1,7 +1,7 @@
-//PalmerPenguins.java
+//PalmerPenguinsM2.java
 //Anna Brohm
-//05/13/2026
-//Introduce Palmer Penguins data set
+//05/22/2026
+//Program to calculate and display Palmer Penguin statistics
 
 public class PalmerPenguins { 
     
@@ -11,6 +11,10 @@ public class PalmerPenguins {
     static final String SP_ADELIE = "Adelie";
     
     static final int TOTAL_SPECIES = 3;
+    
+    static final int NUM_CHINSTRAP = 68;
+    static final int NUM_GENTOO = 123; 
+    static final int NUM_ADELIE = 151;
     
     public static void main(String[] args) { 
     
@@ -22,5 +26,18 @@ public class PalmerPenguins {
         System.out.println("\t" + SP_ADELIE + "!");
         System.out.println("There are a total of " + TOTAL_SPECIES +
                             " penguin species in this dataset.");
+                            
+        int totalPenguins = NUM_CHINSTRAP + NUM_GENTOO + NUM_ADELIE;
+        
+        System.out.println("There are a total of " + totalPenguins +
+                            " penguins in the dataset.");  
+        
+        System.out.printf("%s:%d (%.2f%%)\n", SP_CHINSTRAP, NUM_CHINSTRAP,
+               ((double) NUM_CHINSTRAP /totalPenguins * 100));
+        System.out.printf("%s:%d (%.2f%%)\n", SP_GENTOO, NUM_GENTOO,
+               ((double) NUM_GENTOO /totalPenguins * 100));
+        System.out.printf("%s:%d (%.2f%%)\n", SP_ADELIE, NUM_ADELIE,
+               ((double) NUM_ADELIE /totalPenguins * 100));
+                           
     }
 }
